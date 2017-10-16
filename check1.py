@@ -236,6 +236,8 @@ class tree:
         keys=d.keys()
         keys=sorted(keys)
         print("(",x,",",y,")\t>\t",end='')
+        if len(d)==0:
+            print("None",end='')
         count=0
         for i in keys:
             node=d[i]
@@ -478,18 +480,19 @@ def inputlooper(m,n):
             print("Can't Change the Dimension of the tree while insert")
             print("Chance Skipped")
 
-#firstline()
-a=tree()
+firstline()
 
-a.checkreturn(2,12,16)
-a.checkreturn(2,15,8)
-a.checkreturn(2,5,18)
-a.checkreturn(2,18,5)
-a.checkreturn(2,16,15)
-a.checkreturn(2,2,5)
-a.checkreturn(2,7,10)
-a.checkreturn(2,8,7)
-a.checkreturn(2,5,5)
-a.checkreturn(2,19,12)
-a.checkreturn(2,10,2)
-a.checkreturn(2,13,2)
+# a=tree()
+#
+# a.checkreturn(2,12,16)
+# a.checkreturn(2,15,8)
+# a.checkreturn(2,5,18)
+# a.checkreturn(2,18,5)
+# a.checkreturn(2,16,15)
+# a.checkreturn(2,2,5)
+# a.checkreturn(2,7,10)
+# a.checkreturn(2,8,7)
+# a.checkreturn(2,5,5)
+# a.checkreturn(2,19,12)
+# a.checkreturn(2,10,2)
+# a.checkreturn(2,13,2)
