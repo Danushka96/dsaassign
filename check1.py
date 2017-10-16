@@ -213,8 +213,8 @@ class tree:
             ans=parent
             self._backtrack(new,parent,mini)
             self._bestmatch(new,self.head,mini)
-            print(dicset)
-            print("(",x, y,")","\tmin:",round(mini,2),"\tclosest: ","(",ans.x,ans.y,")")
+            #print(dicset)
+            #print("(",x, y,")","\tmin:",round(mini,2),"\tclosest: ","(",ans.x,ans.y,")")
         return dicset
         #print(mini)
 
@@ -231,17 +231,19 @@ class tree:
 
     def checkreturn(self,threshold,x,y,z=None):
         d=self.Insert(x,y,z) #This one is the Dictionary wich has minimum values and it's own nodes
-        # keys=d.keys()
-        # print(keys)
-        # print("(",x,",",y,")\t>\t",end='')
-        # count=0
-        # for i in keys:
-        #     node=d[i]
-        #     print("(",node.x,",",node.y,")",end='')
-        #     count+=1
-        #     if count==threshold:
-        #         break
-        # print()
+        # for i in d:
+        #     print(round(i,2),">",d[i].x,",",d[i].y)
+        keys=d.keys()
+        keys=sorted(keys)
+        print("(",x,",",y,")\t>\t",end='')
+        count=0
+        for i in keys:
+            node=d[i]
+            print("(",node.x,",",node.y,")",end='')
+            count+=1
+            if count==threshold:
+                break
+        print()
 
     def _backtrack(self,node,parent,min): #parent is a Node is the newly inserted point
         global ans
